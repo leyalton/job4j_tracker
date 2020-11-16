@@ -1,0 +1,1 @@
+insert into items(id, name) values (1, 'role 1');
