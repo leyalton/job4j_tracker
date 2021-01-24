@@ -44,8 +44,8 @@ public class ItemTest {
                 new Item("b"),
                 new Item("b")
         );
-        Comparator c = Collections.reverseOrder(new Item());
-        Collections.sort(items, c);
+        Comparator comparator = Collections.reverseOrder(new Item());
+        Collections.sort(items, comparator);
         assertThat(item.compare(items.get(0), items2.get(0)), is(0));
         assertThat(item.compare(items.get(1), items2.get(1)), is(0));
         assertThat(item.compare(items.get(2), items2.get(2)), is(0));
