@@ -1,10 +1,14 @@
 package ru.job4j.tracker;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Item{
+public class Item implements Comparator<Item> {
     private String id;
     private String name;
+
+    public Item() {
+    }
 
     public Item(String name) {
         this.name = name;
@@ -31,6 +35,11 @@ public class Item{
         return this.name;
     }
 
+
+    @Override
+    public int compare(Item o1, Item o2) {
+        return o1.getName().compareTo(o2.getName());
+    }
 
     @Override
     public boolean equals(Object o) {
